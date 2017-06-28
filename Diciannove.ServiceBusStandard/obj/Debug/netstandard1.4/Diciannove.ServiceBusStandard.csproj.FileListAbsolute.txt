@@ -1,0 +1,4 @@
+C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\bin\Debug\netstandard1.4\Diciannove.ServiceBusStandard.deps.json
+C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\bin\Debug\netstandard1.4\Diciannove.ServiceBusStandard.dll
+C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\obj\Debug\netstandard1.4\Diciannove.ServiceBusStandard.csprojResolveAssemblyReference.cache
+C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\obj\Debug\netstandard1.4\Diciannove.ServiceBusStandard.AssemblyInfo.cs

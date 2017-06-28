@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.5</TargetFramework>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Authors>Armando Ruiz</Authors>
+    <Company>DiciannoveSolutions</Company>
+    <Product>ServiceBus</Product>
+    <Description>ServiceBus is a small distributed application framework for .NET with support for RabbitMq.</Description>
+    <Copyright></Copyright>
+    <PackageId>ServiceBus</PackageId>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://bitbucket.org/diciannove/servicebus/</PackageProjectUrl>
+    <RepositoryUrl>https://bitbucket.org/diciannove/servicebus/</RepositoryUrl>
+    <RepositoryType></RepositoryType>
+    <PackageTags>ServiceBus, rabbitmq, distributed application</PackageTags>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</PackageLicenseUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="RabbitMq\**" />
+    <EmbeddedResource Remove="RabbitMq\**" />
+    <None Remove="RabbitMq\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ServiceBusFactory.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+</Project>

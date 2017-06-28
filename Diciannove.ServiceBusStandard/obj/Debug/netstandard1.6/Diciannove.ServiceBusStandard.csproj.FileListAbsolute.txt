@@ -1,0 +1,6 @@
+C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\bin\Debug\netstandard1.6\Diciannove.ServiceBusStandard.deps.json
+C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\bin\Debug\netstandard1.6\Diciannove.ServiceBusStandard.dll
+C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\obj\Debug\netstandard1.6\Diciannove.ServiceBusStandard.AssemblyInfo.cs
+C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\bin\Debug\netstandard1.6\Diciannove.ServiceBusStandard.pdb
+C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\obj\Debug\netstandard1.6\Diciannove.ServiceBusStandard.dll
+C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\obj\Debug\netstandard1.6\Diciannove.ServiceBusStandard.pdb
