@@ -24,14 +24,14 @@ namespace Diciannove.ServiceBus.Rpc
             return _instance;
         }
 
-        public async Task<TResponse> RegisterRequest<TResponse>(IBusMessage message, TimeSpan timeout, Action publishAction)
+        public async Task<TResponse> RegisterRpcRequest<TResponse>(IBusMessage message, TimeSpan timeout, Action publishAction)
         {
             var response = default(TResponse);
             RpcError error = null;
 
             var setEvent = new ManualResetEvent(false);
 
-            Action<IBusMessage> onReply = rpcReply =>
+            Action<IBusMessage> replyCallback = rpcReply =>
             {
                 if (rpcReply is RpcError)
                 {
@@ -58,17 +58,17 @@ namespace Diciannove.ServiceBus.Rpc
                 if (response == null)
                     throw new InvalidCastException(
                         string.Format(
-                            "Could not cast the reply to the correct type. Expected '{0}', recieved '{1}'",
+                            "Could not cast the reply to the correct type. Expected '{0}', received '{1}'",
                             typeof(TResponse).FullName, rpcReply.GetType().FullName));
 
                 setEvent.Set();
             };
 
 
-            var added = _requests.TryAdd(message.MessageId, onReply);
+            var added = _requests.TryAdd(message.MessageId, replyCallback);
             if (!added)
                 throw new Exception(string.Format(
-                    "The RPC Repository service already has a reply registered for request id '{0}'",
+                    "The RPC Repository service already has a reply handler registered for request id '{0}'",
                     message.MessageId));
 
             var task = Task.Factory.StartNew(() =>
@@ -81,7 +81,7 @@ namespace Diciannove.ServiceBus.Rpc
 
                 if (response == null)
                     throw new TimeoutException(string.Format(
-                        "The RPC response timeout of {0} seconds has been reached. You may optionally pass in an increased timeout parameter when publishing the request.",
+                        "The RPC response timeout of {0} seconds has been reached.",
                         timeout.TotalSeconds));
                 return response;
             });
@@ -91,8 +91,8 @@ namespace Diciannove.ServiceBus.Rpc
         public void HandleRcpResponse(RpcResponse response)
         {
             Action<RpcResponse> handler;
-            var gotValue = _requests.TryRemove(response.Request.RequestId, out handler);
-            if (!gotValue)
+            var request = _requests.TryRemove(response.Request.RequestId, out handler);
+            if (!request)
                 throw new Exception(string.Format("No handler was registered for the RPC response for the request id '{0}'", response.Request.RequestId));
 
             handler(response);

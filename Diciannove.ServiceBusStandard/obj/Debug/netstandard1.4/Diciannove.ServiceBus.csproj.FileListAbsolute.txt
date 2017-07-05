@@ -1,3 +1,0 @@
-C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\bin\Debug\netstandard1.4\Diciannove.ServiceBus.deps.json
-C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\obj\Debug\netstandard1.4\Diciannove.ServiceBus.AssemblyInfo.cs
-C:\Users\agarcia\Projects\Diciannove\ServiceBus\Diciannove.ServiceBusStandard\bin\Debug\netstandard1.4\Diciannove.ServiceBus.dll
