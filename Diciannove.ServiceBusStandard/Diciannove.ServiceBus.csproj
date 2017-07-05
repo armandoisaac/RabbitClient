@@ -10,8 +10,8 @@
     <Copyright></Copyright>
     <PackageId>ServiceBus</PackageId>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://bitbucket.org/diciannove/servicebus/</PackageProjectUrl>
-    <RepositoryUrl>https://bitbucket.org/diciannove/servicebus/</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/armandoisaac/ServiceBus</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/armandoisaac/ServiceBus</RepositoryUrl>
     <RepositoryType></RepositoryType>
     <PackageTags>ServiceBus, rabbitmq, distributed application</PackageTags>
     <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</PackageLicenseUrl>
