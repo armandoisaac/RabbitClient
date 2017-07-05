@@ -1,0 +1,35 @@
+.svn
+
+#ignore thumbnails created by windows
+Thumbs.db
+
+#Ignore files build by Visual Studio
+*.orig
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.bak
+#*.cache
+*.ilk
+*.log
+*.InstallLog
+*.dll
+[Bb]in
+[Dd]ebug*/
+*.sbr
+*.DS_STORE
+obj/
+[Rr]elease*/
+_ReSharper*/
+*git-ignore*
+__pycache__/
+packages/
+.nuget/temp/
+# be explicit with .user files to exclude
+*.csproj.user
+*.ReSharper.user
+*.DotSettings.user
