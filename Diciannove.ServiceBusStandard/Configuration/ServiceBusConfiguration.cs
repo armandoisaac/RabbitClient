@@ -3,7 +3,11 @@ using System.Collections.Generic;
 
 namespace Diciannove.ServiceBus.Configuration
 {
-    public class ServiceBusConfiguration<TConnectionConfiguration, TQueueConfiguration> 
+    public class ServiceBusConfiguration : ServiceBusConfiguration<ConnectionConfiguration, QueueConfiguration>
+    {
+    }
+
+    public class ServiceBusConfiguration<TConnectionConfiguration, TQueueConfiguration>
         where TConnectionConfiguration : ConnectionConfiguration, new()
         where TQueueConfiguration : QueueConfiguration, new()
     {
