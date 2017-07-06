@@ -5,14 +5,15 @@ using Diciannove.ServiceBus.Messages;
 
 namespace Diciannove.ServiceBus
 {
-    public interface IServiceBus<TConnectionConfiguration> : IDisposable
+    public interface IServiceBus<TConnectionConfiguration, TQueueConfiguration> : IDisposable
         where TConnectionConfiguration : ConnectionConfiguration, new()
+        where TQueueConfiguration : QueueConfiguration, new()
     {
         /// <summary>
         ///     Initializes the service bus implementation
         /// </summary>
         /// <param name="config">The configuration of the service bus broker</param>
-        void Initialize(ServiceBusConfiguration<TConnectionConfiguration> config);
+        void Initialize(ServiceBusConfiguration<TConnectionConfiguration, TQueueConfiguration> config);
 
         /// <summary>
         ///     Publishes a message to the message broker

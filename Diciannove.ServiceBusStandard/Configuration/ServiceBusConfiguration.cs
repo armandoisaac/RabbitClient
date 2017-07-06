@@ -3,20 +3,22 @@ using System.Collections.Generic;
 
 namespace Diciannove.ServiceBus.Configuration
 {
-    public class ServiceBusConfiguration<T> where T : ConnectionConfiguration, new()
+    public class ServiceBusConfiguration<TConnectionConfiguration, TQueueConfiguration> 
+        where TConnectionConfiguration : ConnectionConfiguration, new()
+        where TQueueConfiguration : QueueConfiguration, new()
     {
-        public readonly List<QueueConfiguration> QueueHandlers;
+        public readonly List<TQueueConfiguration> QueueHandlers;
 
         public ServiceBusConfiguration()
         {
-            QueueHandlers = new List<QueueConfiguration>();
+            QueueHandlers = new List<TQueueConfiguration>();
             ClientName = Environment.MachineName;
             DefaultConcurrencyLimit = 5;
-            ConnectionConfiguration = new T();
+            ConnectionConfiguration = new TConnectionConfiguration();
             ExceptionHandler = e => { };
         }
 
-        public T ConnectionConfiguration { get; set; }
+        public TConnectionConfiguration ConnectionConfiguration { get; set; }
 
         public ushort DefaultConcurrencyLimit { get; set; }
 

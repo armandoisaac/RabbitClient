@@ -3,8 +3,8 @@ using Diciannove.ServiceBus.Configuration;
 
 namespace Diciannove.ServiceBus
 {
-    public interface IServiceBusConnection<T>: IDisposable where T : class
+    public interface IServiceBusConnection<TConnection>: IDisposable where TConnection : class
     {
-        T GetConnection(ConnectionConfiguration config);
+        TConnection GetConnection(ConnectionConfiguration config);
     }
 }
