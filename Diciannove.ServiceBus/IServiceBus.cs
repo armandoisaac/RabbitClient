@@ -5,15 +5,40 @@ using Diciannove.ServiceBus.Messages;
 
 namespace Diciannove.ServiceBus
 {
-    public interface IServiceBus<TConnectionConfiguration, TQueueConfiguration> : IDisposable
-        where TConnectionConfiguration : ConnectionConfiguration, new()
-        where TQueueConfiguration : QueueConfiguration, new()
+    public interface IServiceBus : IDisposable
     {
+
         /// <summary>
-        ///     Initializes the service bus implementation
+        ///     Publishes a message to the message broker
         /// </summary>
-        /// <param name="config">The configuration of the service bus broker</param>
-        void Initialize(ServiceBusConfiguration<TConnectionConfiguration, TQueueConfiguration> config);
+        /// <param name="exchangeName"></param>
+        /// <param name="message">The message to be sent</param>
+        void Publish(string exchangeName, IBusMessage message);
+
+        /// <summary>
+        ///     Publishes a message to the message broker
+        /// </summary>
+        /// <param name="exchangeName"></param>
+        /// <param name="message">The message to be sent</param>
+        /// <param name="routingKey"></param>
+        void Publish(string exchangeName, IBusMessage message, string routingKey);
+
+        /// <summary>
+        ///     Publishes a message to the message broker
+        /// </summary>
+        /// <param name="exchangeName"></param>
+        /// <param name="message">The message to be sent</param>
+        /// <param name="routingKey"></param>
+        /// <param name="ttl"></param>
+        void Publish(string exchangeName, IBusMessage message, string routingKey, TimeSpan ttl);
+
+        /// <summary>
+        ///     Publishes a message to the message broker
+        /// </summary>
+        /// <param name="exchangeName"></param>
+        /// <param name="message">The message to be sent</param>
+        /// <param name="ttl"></param>
+        void Publish(string exchangeName, IBusMessage message, TimeSpan ttl);
 
         /// <summary>
         ///     Publishes a message to the message broker
@@ -22,11 +47,11 @@ namespace Diciannove.ServiceBus
         void Publish(IBusMessage message);
 
         /// <summary>
-        ///     Sends a message to an specific queue on the message broker
+        ///     Publishes a message to the message broker
         /// </summary>
-        /// <param name="queueName">The queue name</param>
         /// <param name="message">The message to be sent</param>
-        void Send(string queueName, IBusMessage message);
+        /// <param name="routingKey"></param>
+        void Publish(IBusMessage message, string routingKey);
 
         /// <summary>
         ///     Publishes a message to the message broker
@@ -34,6 +59,21 @@ namespace Diciannove.ServiceBus
         /// <param name="message">The message to be sent</param>
         /// <param name="ttl">The amout of time before the message expires</param>
         void Publish(IBusMessage message, TimeSpan ttl);
+
+        /// <summary>
+        ///     Publishes a message to the message broker
+        /// </summary>
+        /// <param name="message">The message to be sent</param>
+        /// <param name="routingKey"></param>
+        /// <param name="ttl">The amout of time before the message expires</param>
+        void Publish(IBusMessage message, string routingKey, TimeSpan ttl);
+
+        /// <summary>
+        ///     Sends a message to an specific queue on the message broker
+        /// </summary>
+        /// <param name="queueName">The queue name</param>
+        /// <param name="message">The message to be sent</param>
+        void Send(string queueName, IBusMessage message);
 
         /// <summary>
         ///     Sends a message to an specific queue on the message broker

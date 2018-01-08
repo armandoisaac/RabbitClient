@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.Serialization;
 
 namespace Diciannove.ServiceBus.Configuration
 {
@@ -14,7 +13,8 @@ namespace Diciannove.ServiceBus.Configuration
         {
         }
 
-        public InvalidHandlerConfigurationException(string message, Exception innerException) : base(message, innerException)
+        public InvalidHandlerConfigurationException(string message, Exception innerException) : base(message,
+            innerException)
         {
         }
     }
