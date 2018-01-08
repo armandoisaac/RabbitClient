@@ -33,3 +33,4 @@ packages/
 *.csproj.user
 *.ReSharper.user
 *.DotSettings.user
+.vs/*

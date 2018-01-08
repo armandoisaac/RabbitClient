@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>ServiceBus.RabbitMq</PackageId>
+    <Authors>Armando Ruiz</Authors>
+    <Company>DiciannoveSolutions</Company>
+    <Product>ServiceBus.RabbitMq</Product>
+    <Description>The RabbitMq support for the ServiceBus project, a small distributed application framework for .NET.</Description>
+    <Copyright></Copyright>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/armandoisaac/ServiceBus.RabbitMq</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/armandoisaac/ServiceBus.RabbitMq</RepositoryUrl>
+    <PackageTags>ServiceBus, rabbitmq, distributed application</PackageTags>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="RabbitMQ.Client" Version="5.0.1" />
+    <PackageReference Include="RestSharp" Version="106.2.1" />
+    <PackageReference Include="System.Diagnostics.Process" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Diciannove.ServiceBus\Diciannove.ServiceBus.csproj" />
+  </ItemGroup>
+
+</Project>

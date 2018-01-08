@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.5</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Authors>Armando Ruiz</Authors>
     <Company>DiciannoveSolutions</Company>
@@ -29,6 +29,18 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MasterDetailPage1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MasterDetailPage1Detail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MasterDetailPage1Master.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

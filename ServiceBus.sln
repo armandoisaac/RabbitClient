@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMq", "RabbitMq", "{DB69399C-699D-4B94-878C-14A8E388DF36}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diciannove.ServiceBus", "Diciannove.ServiceBus\Diciannove.ServiceBus.csproj", "{2F1C1A39-8DEF-42C7-8A55-2A1EE7DBE09B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitClient", "RabbitMq\RabbitClient\RabbitClient.csproj", "{ADAA23A4-48DE-4755-9931-372A5770D32A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{55A70EE7-CC63-4717-B126-FF5263AEBE3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "RabbitMq\Examples\Client\Client.csproj", "{102BF474-DF86-461F-A5A9-5F9CA1750983}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "RabbitMq\Examples\SharedLibrary\SharedLibrary.csproj", "{92FB8776-BFFC-4C12-A1F5-2404C2833FA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "RabbitMq\Examples\Service\Service.csproj", "{654301F3-77ED-4790-972E-8503EF871EF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F1C1A39-8DEF-42C7-8A55-2A1EE7DBE09B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1C1A39-8DEF-42C7-8A55-2A1EE7DBE09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1C1A39-8DEF-42C7-8A55-2A1EE7DBE09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1C1A39-8DEF-42C7-8A55-2A1EE7DBE09B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADAA23A4-48DE-4755-9931-372A5770D32A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADAA23A4-48DE-4755-9931-372A5770D32A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADAA23A4-48DE-4755-9931-372A5770D32A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADAA23A4-48DE-4755-9931-372A5770D32A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{102BF474-DF86-461F-A5A9-5F9CA1750983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{102BF474-DF86-461F-A5A9-5F9CA1750983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{102BF474-DF86-461F-A5A9-5F9CA1750983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{102BF474-DF86-461F-A5A9-5F9CA1750983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92FB8776-BFFC-4C12-A1F5-2404C2833FA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FB8776-BFFC-4C12-A1F5-2404C2833FA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92FB8776-BFFC-4C12-A1F5-2404C2833FA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92FB8776-BFFC-4C12-A1F5-2404C2833FA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{654301F3-77ED-4790-972E-8503EF871EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{654301F3-77ED-4790-972E-8503EF871EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{654301F3-77ED-4790-972E-8503EF871EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{654301F3-77ED-4790-972E-8503EF871EF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ADAA23A4-48DE-4755-9931-372A5770D32A} = {DB69399C-699D-4B94-878C-14A8E388DF36}
+		{55A70EE7-CC63-4717-B126-FF5263AEBE3E} = {DB69399C-699D-4B94-878C-14A8E388DF36}
+		{102BF474-DF86-461F-A5A9-5F9CA1750983} = {55A70EE7-CC63-4717-B126-FF5263AEBE3E}
+		{92FB8776-BFFC-4C12-A1F5-2404C2833FA1} = {55A70EE7-CC63-4717-B126-FF5263AEBE3E}
+		{654301F3-77ED-4790-972E-8503EF871EF0} = {55A70EE7-CC63-4717-B126-FF5263AEBE3E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9C5341D-9D8A-4E31-99E9-0E3DB956C4E3}
+	EndGlobalSection
+EndGlobal
