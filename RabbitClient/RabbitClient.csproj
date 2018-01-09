@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>RabbitClient</PackageId>
+    <Authors>Armando Ruiz</Authors>
+    <Company>DiciannoveSolutions</Company>
+    <Product>RabbitClient</Product>
+    <Description>RabbitClient is a custom wrapper for the RabbitMq client and allows any developer to connect, publish, send and consume messages in an easy and straightforward way</Description>
+    <Copyright></Copyright>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/armandoisaac/RabbitClient</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/armandoisaac/RabbitClient</RepositoryUrl>
+    <PackageTags>ServiceBus, rabbitmq, distributed application, rabbitmq client</PackageTags>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="RabbitMQ.Client" Version="5.0.1" />
+    <PackageReference Include="RestSharp" Version="106.2.1" />
+    <PackageReference Include="System.Diagnostics.Process" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RabbitClient.Core\RabbitClient.Core.csproj" />
+  </ItemGroup>
+
+</Project>

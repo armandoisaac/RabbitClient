@@ -1,19 +1,19 @@
-# ServiceBus.RabbitMq
+# RabbitClient
 
-Welcome to the ServiceBus.RabbitMq project. This project has been built as a small client for the RabbitMq message broker. If you have any issues with this project, please use the [Issue Tracker](https://bitbucket.org/diciannove/servicebus.rabbitmq/issues?status=new&status=open).
+Welcome to the RabbitClient project. This project has been built as a small wrapper for the RabbitMq C# package. If you have any issues with this project, please use the [Issue Tracker](https://github.com/armandoisaac/RabbitClient/issues).
 
 ## How to use this package
 
 #### Installing the nuget package
-The  ServiceBus.RabbitMq project has it's own package that can be downloaded and installed from your project using the [Nuget package](https://www.nuget.org/packages/ServiceBus.RabbitMq/).
+The  RabbitClient project has it's own package that can be downloaded and installed from your project using the [Nuget package](https://www.nuget.org/packages/RabbitClient/).
 
-To install ServiceBus.RabbitMq, run the following command in the Package Manager Console:
+To install RabbitClient, run the following command in the Package Manager Console:
 
 
-    PM> Install-Package ServiceBus.RabbitMq
+    PM> Install-Package RabbitClient
 
 #### Creating your messages
-All messages that will be sent over the RabbitMq service bus must implement the IMessage interface located at the Diciannove.ServiceBus.Messages namespace. You can use the the Message class as your base class.
+All messages that will be sent over the RabbitMq service bus must implement the IMessage interface located at the RabbitClient.Core.Messages namespace. You can use the the Message class as your base class.
 
     public class TestMessage : BusMessage
     {
