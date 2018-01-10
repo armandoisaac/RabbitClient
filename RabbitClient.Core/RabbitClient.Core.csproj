@@ -15,6 +15,7 @@
     <RepositoryType></RepositoryType>
     <PackageTags>ServiceBus, rabbitmq, distributed application</PackageTags>
     <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</PackageLicenseUrl>
+    <Configurations>Debug;Release;BuildServer</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
